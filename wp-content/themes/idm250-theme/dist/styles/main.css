@@ -17,6 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* header navigation */
 body {
   background-color: #171716;
+  font-family: 'Gruppo', sans-serif;
   
 }
 
@@ -159,3 +160,25 @@ text-shadow:
     0 0 151px #aba7d1;
 }
   
+
+h1 {
+  font-family: 'Codystar', sans-serif;
+}
+
+h2 {
+  font-family: 'Gruppo', sans-serif;
+}
+
+h3 {
+  font-family: 'Gruppo', sans-serif;
+}
+
+h4, h5, h6 {
+  font-family: 'Gruppo', sans-serif;
+
+}
+
+p {
+  font-family: 'Gruppo', sans-serif;
+}
+

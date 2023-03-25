@@ -21,8 +21,8 @@ function theme_scripts_and_styles()
     );
     // Load in Google Fonts
     wp_enqueue_style(
-        'google-fonts',
-        'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap',
+        'adobe-fonts',
+        'https://use.typekit.net/dmw3sdk.css',
         [],
         null
     );
@@ -35,6 +35,20 @@ function theme_scripts_and_styles()
         filemtime(get_template_directory() . '/dist/styles/main.css'), // version number
         'all' // media
     );
+
+    function mytheme_widgets_init() {
+        register_sidebar( array(
+            'name'          => __( 'Sidebar', 'mytheme' ),
+            'id'            => 'sidebar-1',
+            'description'   => __( 'Add widgets here to appear in your sidebar.', 'mytheme' ),
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        ) );
+    }
+    add_action( 'widgets_init', 'mytheme_widgets_init' );
+    
 
     // Load in local JS {@link https://developer.wordpress.org/reference/functions/wp_enqueue_script/}
     wp_enqueue_script(
